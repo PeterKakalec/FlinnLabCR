@@ -69,7 +69,7 @@ cdat<-makeDF(paste("./CSVs/",list.files(path="./CSVs"),sep=""))
 
 write.csv(cdat,"longDat.csv")
 
-wideDat<-cdat %>% group_by(name,hour,cohort,round) %>% summarize(counts=mean(counts))
-wideDat2<-dcast(wideDat,name+cohort+round~hour)
+wideDat<-cdat %>% group_by(name,hour) %>% summarize(counts=mean(counts))
+wideDat2<-dcast(wideDat,name~hour)
 View(wideDat2)
 write.csv(wideDat2,"wideDat.csv")
