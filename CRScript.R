@@ -1,10 +1,5 @@
 library(reshape2)
 library(tidyverse)
-library(ggpubr)
-library(rstatix)
-library(foreign)
-library(GGally)
-library(lme4)
 library(dplyr)
 library(tidyr)
 #Reading in data, generating variables
